@@ -2,7 +2,6 @@
 
 {Description and usage instructions go here}
 
-{Describe your purpose for creating this app.}
 My goal for creating this app, is to build something I can actually release to the public that I might actually use. More specifically, I want to build something I would be willing to use. I believe that if I am to truly build and demonstrate my skills as a developer, then I need to build something with the intention of releasing it for use in the general public. I would not call myself a writer if I had not published a book. Why would I treat my programming any different. Additionally, I want to prove that I can build a program that someone not using an IDE could actually use and enjoy, and while I am at it, showcase my ability to learn new technologies and my ability to further my knowledge of existing programming languages. 
 
 [Software Demo Video Coming 14 October 2023](http://youtube.link.goes.here)
