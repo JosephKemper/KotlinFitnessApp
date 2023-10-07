@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.healthandfitnessapp.ui.theme.HealthAndFitnessAppTheme
+val workoutList = mutableListOf<Exercise>() // Stores the different exercises that make up a workout
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,4 +47,19 @@ fun GreetingPreview() {
     HealthAndFitnessAppTheme {
         Greeting("Android")
     }
+}
+
+// Define function to get input from user
+
+
+data class Exercise(
+    val name: String,
+    val time: Int? = null, // time in minutes
+    val weight: Double? = null, // weight in pounds
+    val reps: Int? = null,
+    val sets: Int? = null
+)
+
+fun CreateExercise(){
+
 }
