@@ -18,6 +18,13 @@ My goal for creating this app, is to build something I can actually release to t
 # Useful Websites
 
 * [Android Studio version 2022.3.1](https://developer.android.com/studio)
+* [Android Software Development Wiki](https://en.wikipedia.org/wiki/Android_software_development)
+* [Create your first Android app](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-app#0)
+* [Android Basics in Kotlin](https://developer.android.com/courses/android-basics-kotlin/course)
+* [Permissions on Android](https://developer.android.com/guide/topics/permissions/overview)
+* [Stackoverflow How to enable Location access programmatically in android?](https://stackoverflow.com/questions/25175522/how-to-enable-location-access-programmatically-in-android)
+* [Intents and intent filters Official Documentation](https://developer.android.com/guide/components/intents-filters)
+* [Save simple data with SharedPreferences Official Documentation](https://developer.android.com/training/data-storage/shared-preferences)
 * [RRtutors Create checkbox](https://rrtutors.com/tutorials/How-to-create-checkbox-with-Jetpack-compose)
 * [Coding with Rashid Adding checkbox](https://codingwithrashid.com/how-to-add-checkbox-in-android-jetpack-compose/)
 * [Medium Handling User Input Complete Guide](https://medium.com/@android-world/handling-user-input-in-jetpack-compose-a-complete-guide-203b275a6a03)
