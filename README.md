@@ -18,10 +18,10 @@ My goal for creating this app, is to build something I can actually release to t
 # Useful Websites
 
 * [Android Studio version 2022.3.1](https://developer.android.com/studio)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [RRtutors Create checkbox](https://rrtutors.com/tutorials/How-to-create-checkbox-with-Jetpack-compose)
+* [Coding with Rashid Adding checkbox](https://codingwithrashid.com/how-to-add-checkbox-in-android-jetpack-compose/)
+* [Medium Handling User Input Complete Guide](https://medium.com/@android-world/handling-user-input-in-jetpack-compose-a-complete-guide-203b275a6a03)
+* [Android Developer Dialog official documentation](https://developer.android.com/jetpack/compose/components/dialog)
 * [Web Site Name](http://url.link.goes.here)
 
 # Future Work
