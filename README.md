@@ -38,7 +38,7 @@ My goal for creating this app, is to build something I can actually release to t
 * [AppDevNotes Jetpack Compose for Beginners](https://appdevnotes.com/complete-jetpack-compose-tutorial-for-beginners/)
 * [Android Official Kotlin Guides](https://developer.android.com/kotlin/)
 * [Additional resources for getting started with Kotlin](https://developer.android.com/kotlin/getting-started-resources)
-* [Web Site Name](http://url.link.goes.here)
+* [YouTube Jetpack Compose: Build Your First App (2023) - Android for Beginners](https://www.youtube.com/watch?v=uy6ZQRrll4E)
 * [Web Site Name](http://url.link.goes.here)
 
 # Future Work
