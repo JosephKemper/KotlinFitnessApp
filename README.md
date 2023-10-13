@@ -8,10 +8,10 @@ My goal for creating this app, is to build something I can actually release to t
 
 # Development Environment
 
-- Android Developer Studio 
+- Android Developer Studio 2022.3.1 Patch 2
 - Kotlin version 1.9.0
 - GitHub
-- Library 1
+- Jetpack Compose
 - Library 2
 - Library 3
 
@@ -29,15 +29,27 @@ My goal for creating this app, is to build something I can actually release to t
 * [Coding with Rashid Adding checkbox](https://codingwithrashid.com/how-to-add-checkbox-in-android-jetpack-compose/)
 * [Medium Handling User Input Complete Guide](https://medium.com/@android-world/handling-user-input-in-jetpack-compose-a-complete-guide-203b275a6a03)
 * [Android Developer Dialog official documentation](https://developer.android.com/jetpack/compose/components/dialog)
+* [The Jetpack Compose Beginner Crash Course for 2023 💻 (Android Studio Tutorial)](https://youtu.be/6_wK_Ud8--0?si=EoVejQXPLfpicICd)
+* [How to Build a Calculator with Jetpack Compose - Android Studio Tutorial](https://www.youtube.com/watch?v=-aTcFJWxEQA&t=17s)
+* [Jetpack Compose Navigation for Beginners - Android Studio Tutorial](https://www.youtube.com/watch?v=4gUeyNkGE3g)
+* [Create AR app in Android using Jetpack Compose | Beginner's Tutorial](https://www.youtube.com/watch?v=rb5m0Py8y1s)
+* [Jetpack Compose Tutorial](https://developer.android.com/jetpack/compose/tutorial)
+* [FreeCodeCamp Jetpack Compose Tutorial for Beginners](https://www.freecodecamp.org/news/jetpack-compose-beginner-tutorial-composables-recomposition/)
+* [AppDevNotes Jetpack Compose for Beginners](https://appdevnotes.com/complete-jetpack-compose-tutorial-for-beginners/)
+* [Android Official Kotlin Guides](https://developer.android.com/kotlin/)
+* [Additional resources for getting started with Kotlin](https://developer.android.com/kotlin/getting-started-resources)
+* [Web Site Name](http://url.link.goes.here)
 * [Web Site Name](http://url.link.goes.here)
 
 # Future Work
 ## Minimum Viable Product
-* Item 1
-* Item 2
-* Item 3
+* Enter custom designed exercises
+* Display custom Designed Exercises
+* Enter Food and Nutrition Info
+* Display Food and Nutrition info
 
 Extras
-* Item 1
-* Item 2
-* Item 3
+* Save data on phone
+* Create separate screens for exercise and food
+* Track weight 
+* Build reporting data
