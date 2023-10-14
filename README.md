@@ -39,7 +39,7 @@ My goal for creating this app, is to build something I can actually release to t
 * [Android Official Kotlin Guides](https://developer.android.com/kotlin/)
 * [Additional resources for getting started with Kotlin](https://developer.android.com/kotlin/getting-started-resources)
 * [YouTube Jetpack Compose: Build Your First App (2023) - Android for Beginners](https://www.youtube.com/watch?v=uy6ZQRrll4E)
-* [Web Site Name](http://url.link.goes.here)
+* [Handle user input Official Docs](https://developer.android.com/jetpack/compose/text/user-input)
 * [Web Site Name](http://url.link.goes.here)
 * [Web Site Name](http://url.link.goes.here)
 * [Web Site Name](http://url.link.goes.here)
