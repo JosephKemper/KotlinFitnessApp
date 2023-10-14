@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentWidth
+import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -26,17 +27,19 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.kotlinfitnessapp.ui.theme.KotlinFitnessAppTheme
 
+val workoutList = mutableListOf<Workout>() // store a list of all created workouts
 data class Exercise(
-    val sets: Int?,
-    val reps: Int?,
-    val weight: Int?,
-    val minutes: Int?
+    var sets: Int?,
+    var reps: Int?,
+    var weight: Int?,
+    var minutes: Int?
 )
 data class Workout(
-    val exercise: Exercise?,
-    val name: String,
-    val description: String?
+    var exercise: Exercise?,
+    var name: String,
+    var description: String?
 )
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -80,50 +83,28 @@ fun CreateWorkout(
     onSaveWorkout: (workout: Workout) -> Unit
 ) {
     // Create a new var variable to store the workout data.
-    var workout = Workout(name = "", description = null, exercise = null)
+    val workout = remember {
+        mutableStateOf(Workout(name = "", description = null, exercise = null))
 
+
+    }
     // Add text field to collect workout name
-    CustomTextField(
-        value = workout.name,
-        onValueChange = { workout.name = it }
+    BasicTextField(
+        value = workout.value.name,
+        onValueChange = { workout.value.name = it }
     )
 
     // Add optional text field for the workout description
-    if (workout.description != null) {
-        CustomTextField(
-            value = workout.description!!,
-            onValueChange = { workout.description = it }
+    if (workout.value.description != null) {
+        BasicTextField(
+            value = workout.value.description!!,
+            onValueChange = { workout.value.description = it }
         )
     }
 
     // Save the workout when the user clicks the save button.
-    Button(onClick = { onSaveWorkout(workout) }) {
+    Button(onClick = { onSaveWorkout(workout.value) }) {
         Text(text = "Save")
     }
 }
 
-@Composable
-fun CustomTextField(
-    value: String,
-    onValueChange: (String) -> Unit
-) {
-    // Create a text field using the native Android EditText composable.
-    TextField(
-        value = value,
-        onValueChange = onValueChange
-    )
-
-    // Add a border around the text field.
-    Box(
-        modifier = Modifier.border(
-            width = 1.dp,
-            color = Color.Gray
-        )
-    ) {
-        // Add the text field to the box.
-        TextField(
-            value = value,
-            onValueChange = onValueChange
-        )
-    }
-}
