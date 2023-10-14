@@ -11,8 +11,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -66,12 +68,32 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
+// Figure out non experimental text options ... or choose to opt into experimental
 @Composable
 fun CreateWorkout(
-    workoutName: String,
-    workoutDescription: String?,
-    onSaveWorkout: (workoutName: String, workoutDescription: String?) -> Unit
-){
-    //
+    workout: Workout,
+    onSaveWorkout: (workout: Workout) -> Unit
+) {
+    // Create column to contain workout name and description
+    Column {
+        // Add text field to collect workout name
+        OutlinedTextField(
+            value = workout.name,
+            onValueChange = { workout.name = it },
+            label = { Text("Workout name") }
+        )
+
+        // Add optional text field for the workout description
+        if (workout.description != null) {
+            OutlinedTextField(
+                value = workout.description!!,
+                onValueChange = { workout.description = it },
+                label = { Text("Workout description") }
+            )
+        }
+    }
+
+    Button(onClick = { onSaveWorkout(workout) }) {
+        Text(text = "Save Workout")
+    }
 }
