@@ -8,7 +8,7 @@ My goal for creating this app, is to build something I can actually release to t
 
 # Development Environment
 
-- Android Developer Studio 2022.3.1 Patch 2
+- Android Studio Electric Eel | 2022.1.1 Patch 1 January 31, 2023
 - Kotlin version 1.9.0
 - GitHub
 - Jetpack Compose
@@ -17,7 +17,7 @@ My goal for creating this app, is to build something I can actually release to t
 
 # Useful Websites
 
-* [Android Studio version 2022.3.1](https://developer.android.com/studio)
+* [Android Studio Electric Eel | 2022.1.1 Patch 1 January 31, 2023](https://developer.android.com/studio/archive)
 * [Android Software Development Wiki](https://en.wikipedia.org/wiki/Android_software_development)
 * [Create your first Android app](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-app#0)
 * [Android Basics in Kotlin](https://developer.android.com/courses/android-basics-kotlin/course)
