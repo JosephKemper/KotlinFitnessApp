@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentWidth
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
@@ -63,9 +64,14 @@ class MainActivity : ComponentActivity() {
                         Spacer(modifier = Modifier.padding(top = 16.dp))
 
                         // Button for creating workouts
-                        Button(onClick = { /* Do something when the button is clicked. */ },
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
+                        Button(onClick = {
+                            setContent {
+                                CreateWorkout(onSaveWorkout = { workout ->
+                                    // add workout to the workoutList
+                                    workoutList.add(workout)
+                                })
+                            }
+                        }) {
                             Text(text = "Create Workout")
                         }
                     }
@@ -77,6 +83,7 @@ class MainActivity : ComponentActivity() {
 }
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateWorkout(
     exercise: Exercise? = null,
@@ -89,14 +96,14 @@ fun CreateWorkout(
 
     }
     // Add text field to collect workout name
-    BasicTextField(
+    TextField(
         value = workout.value.name,
         onValueChange = { workout.value.name = it }
     )
 
     // Add optional text field for the workout description
     if (workout.value.description != null) {
-        BasicTextField(
+        TextField(
             value = workout.value.description!!,
             onValueChange = { workout.value.description = it }
         )
