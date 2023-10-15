@@ -24,7 +24,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.unit.dp
+import androidx.navigation.findNavController
 import com.example.kotlinfitnessapp.ui.theme.KotlinFitnessAppTheme
+
 
 val workoutList = mutableListOf<Workout>() // store a list of all created workouts
 data class Exercise(
@@ -66,6 +68,8 @@ class MainActivity : ComponentActivity() {
                                 CreateWorkout(onSaveWorkout = { workout ->
                                     // add workout to the workoutList
                                     workoutList.add(workout)
+                                    val navController = findNavController(androidx.navigation.fragment.R.id.nav_host_fragment_container)
+                                    navController.navigate("MainActivity")
                                 })
                             }
                         }) {
@@ -76,6 +80,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+
     }
 }
 
@@ -111,7 +116,10 @@ fun CreateWorkout(
         }
 
         // Save the workout when the user clicks the save button.
-        Button(onClick = { onSaveWorkout(workout.value) }) {
+        Button(onClick = {
+            workout.value.name = defaultText.value
+            onSaveWorkout(workout.value)
+        }) {
             Text(text = "Save")
         }
     }
