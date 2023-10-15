@@ -1,6 +1,6 @@
 # Overview
 
-{Description and usage instructions go here}
+This app is meant to serve as a reminder for you of what workouts you plan to do each day. You can create custom exercises within it by first creating a workout to place your exercise in, and then creating an exercise to add to your workout. One workout can have multiple exercises. 
 
 My goal for creating this app, is to build something I can actually release to the public that I might actually use. More specifically, I want to build something I would be willing to use. I believe that if I am to truly build and demonstrate my skills as a developer, then I need to build something with the intention of releasing it for use in the general public. I would not call myself a writer if I had not published a book. Why would I treat my programming any different. Additionally, I want to prove that I can build a program that someone not using an IDE could actually use and enjoy, and while I am at it, showcase my ability to learn new technologies and my ability to further my knowledge of existing programming languages. 
 
@@ -8,16 +8,17 @@ My goal for creating this app, is to build something I can actually release to t
 
 # Development Environment
 
-- Android Studio Electric Eel | 2022.1.1 Patch 1 January 31, 2023
-- Kotlin version 1.9.0
+- Android Studio Giraffe | 2022.3.1 Patch 2
+- Kotlin version 1.9.0-release-358
 - GitHub
 - Jetpack Compose
-- Library 2
-- Library 3
+- compileSdk = 34
+- Jetpack Compose version 1.4.3
+
 
 # Useful Websites
 
-* [Android Studio Electric Eel | 2022.1.1 Patch 1 January 31, 2023](https://developer.android.com/studio/archive)
+* [Android Studio Download](https://developer.android.com/studio)
 * [Android Software Development Wiki](https://en.wikipedia.org/wiki/Android_software_development)
 * [Create your first Android app](https://developer.android.com/codelabs/basic-android-kotlin-compose-first-app#0)
 * [Android Basics in Kotlin](https://developer.android.com/courses/android-basics-kotlin/course)
@@ -42,15 +43,7 @@ My goal for creating this app, is to build something I can actually release to t
 * [Handle user input Official Docs](https://developer.android.com/jetpack/compose/text/user-input)
 * [Capturing User Input with Jetpack Compose (EditText)](https://youtu.be/O_MmOP5fjUg?si=2QOW_0GJMw8goCnn)
 * [Jetpack State in composables Official Docs](https://developer.android.com/jetpack/compose/state#state-in-composables)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+
 
 # Future Work
 ## Minimum Viable Product
