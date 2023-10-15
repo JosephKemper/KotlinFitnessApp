@@ -3,28 +3,26 @@ package com.example.kotlinfitnessapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.border
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.wrapContentWidth
-import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material3.Button
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.unit.dp
 import com.example.kotlinfitnessapp.ui.theme.KotlinFitnessAppTheme
 
@@ -37,8 +35,7 @@ data class Exercise(
 )
 data class Workout(
     var exercise: Exercise?,
-    var name: String,
-    var description: String?
+    var name: String
 )
 
 class MainActivity : ComponentActivity() {
@@ -82,7 +79,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CreateWorkout(
@@ -91,27 +87,33 @@ fun CreateWorkout(
 ) {
     // Create a new var variable to store the workout data.
     val workout = remember {
-        mutableStateOf(Workout(name = "", description = null, exercise = null))
-
-
+        mutableStateOf(Workout(name = "", exercise = null))
     }
-    // Add text field to collect workout name
-    TextField(
-        value = workout.value.name,
-        onValueChange = { workout.value.name = it }
-    )
-
-    // Add optional text field for the workout description
-    if (workout.value.description != null) {
+    Column(
+        Modifier.fillMaxSize(),
+        verticalArrangement = Arrangement.Center
+    ) {
+        val defaultText = remember { mutableStateOf("")}
+        val focusRequester = remember { FocusRequester() }
+        Text(text = "Workout Name")
+        // Add text field to collect workout name
         TextField(
-            value = workout.value.description!!,
-            onValueChange = { workout.value.description = it }
+            value = defaultText.value,
+            onValueChange = {newValue ->
+                defaultText.value = newValue },
+            modifier = Modifier
+                .align(Alignment.CenterHorizontally)
+                .padding(16.dp)
+                .focusRequester(focusRequester)
         )
-    }
+        LaunchedEffect(Unit){
+            focusRequester.requestFocus()
+        }
 
-    // Save the workout when the user clicks the save button.
-    Button(onClick = { onSaveWorkout(workout.value) }) {
-        Text(text = "Save")
+        // Save the workout when the user clicks the save button.
+        Button(onClick = { onSaveWorkout(workout.value) }) {
+            Text(text = "Save")
+        }
     }
 }
 
